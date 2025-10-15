@@ -66,37 +66,42 @@ const Index = () => {
         </div>
       </nav>
 
-      <section id="hero" className="pt-24 pb-16 min-h-screen flex items-center bg-gradient-to-b from-muted/30 to-background">
-        <div className="container mx-auto px-4">
+      <section id="hero" className="relative pt-24 pb-16 min-h-screen flex items-center overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-50"></div>
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-10 left-20 text-8xl">🌾</div>
+          <div className="absolute top-40 right-32 text-6xl rotate-45">🌾</div>
+          <div className="absolute bottom-32 left-1/4 text-7xl -rotate-12">🍞</div>
+          <div className="absolute top-1/3 right-20 text-5xl rotate-12">🥖</div>
+          <div className="absolute bottom-20 right-1/3 text-6xl">🌾</div>
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6 animate-fade-in">
-              <h1 className="text-5xl lg:text-6xl font-bold text-secondary leading-tight">
+              <div className="inline-block bg-secondary/10 px-4 py-2 rounded-full border-2 border-secondary/20">
+                <span className="text-sm font-semibold text-secondary">25 лет на рынке</span>
+              </div>
+              <h1 className="text-5xl lg:text-7xl font-bold text-secondary leading-tight drop-shadow-sm">
                 Всё для выпечки<br />и хлеба
               </h1>
-              <p className="text-lg text-muted-foreground leading-relaxed">
+              <p className="text-xl text-foreground/80 leading-relaxed">
                 Компания «Торговый дом «Сибирские Просторы» входит в Ассоциацию производителей и поставщиков хлебобулочных изделий. Поставляем качественную продукцию для производства хлебобулочных изделий уже 25 лет.
               </p>
-              <div className="flex gap-4">
-                <Button size="lg" onClick={() => scrollToSection('products')} className="bg-primary hover:bg-primary/90">
-                  Наша продукция
-                </Button>
-                <Button size="lg" variant="outline" onClick={() => scrollToSection('contacts')}>
-                  Связаться с нами
-                </Button>
-              </div>
             </div>
-            <div className="relative h-[400px] lg:h-[500px] rounded-lg overflow-hidden shadow-2xl">
+            <div className="relative h-[400px] lg:h-[550px] rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
               <img 
                 src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=800&h=600&fit=crop" 
                 alt="Свежий хлеб и выпечка"
                 className="w-full h-full object-cover"
               />
+              <div className="absolute inset-0 bg-gradient-to-t from-secondary/40 via-transparent to-transparent"></div>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="about" className="py-20 bg-muted/20">
+      <section id="about" className="relative py-20 bg-gradient-to-b from-white to-amber-50/30">
+        <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-yellow-50 to-transparent"></div>
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl font-bold text-center mb-12 text-secondary">О нас</h2>
@@ -120,7 +125,11 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="products" className="py-20">
+      <section id="products" className="relative py-20 bg-gradient-to-br from-orange-50/40 via-yellow-50/30 to-amber-50/40">
+        <div className="absolute top-10 right-10 text-9xl opacity-5">🌾</div>
+        <div className="absolute bottom-20 left-10 text-9xl opacity-5 rotate-180">🌾</div>
+        <div className="absolute top-1/2 left-1/4 text-7xl opacity-5">🍞</div>
+        <div className="relative z-10">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-4 text-secondary">Продукция</h2>
           <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
@@ -243,9 +252,15 @@ const Index = () => {
             </Card>
           </div>
         </div>
+        </div>
       </section>
 
-      <section id="contacts" className="py-20 bg-gradient-to-b from-muted/20 to-background">
+      <section id="contacts" className="relative py-20 bg-gradient-to-b from-amber-100/50 via-orange-50/30 to-yellow-100/40">
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-20 left-10 text-7xl">📧</div>
+          <div className="absolute bottom-20 right-10 text-7xl">📞</div>
+          <div className="absolute top-1/2 right-1/4 text-6xl">📍</div>
+        </div>
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-12 text-secondary">Контакты</h2>
           <Card className="max-w-2xl mx-auto border-2 border-primary/20">
@@ -288,7 +303,8 @@ const Index = () => {
         </div>
       </section>
 
-      <footer className="bg-secondary text-white py-8">
+      <footer className="relative bg-gradient-to-br from-amber-900 via-orange-900 to-yellow-900 text-white py-8">
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMC41IiBvcGFjaXR5PSIwLjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] opacity-30"></div>
         <div className="container mx-auto px-4 text-center">
           <div className="flex items-center justify-center gap-2 mb-4">
             <Icon name="Wheat" size={24} />

@@ -74,8 +74,11 @@ const Index = () => {
         </div>
       </nav>
 
-      <section id="hero" className="relative pt-32 pb-20 min-h-screen flex items-center">
-        <div className="absolute inset-0 bg-gradient-to-br from-muted via-white to-muted"></div>
+      <section id="hero" className="relative pt-32 pb-20 min-h-screen flex items-center overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-yellow-50 via-white to-amber-50"></div>
+        <div className="absolute inset-0 opacity-[0.03]" style={{backgroundImage: 'radial-gradient(circle at 2px 2px, #1a1a1a 1px, transparent 0)', backgroundSize: '40px 40px'}}></div>
+        <div className="absolute top-20 right-10 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 left-10 w-80 h-80 bg-amber-200/20 rounded-full blur-3xl"></div>
         <div className="container mx-auto px-6 relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8 animate-fade-in">
@@ -111,19 +114,28 @@ const Index = () => {
             </div>
             <div className="relative">
               <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-accent/20 rounded-3xl blur-2xl"></div>
-              <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl">
-                <img 
-                  src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=800&h=600&fit=crop" 
-                  alt="Свежий хлеб и выпечка"
-                  className="w-full h-full object-cover"
-                />
+              <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-amber-100 via-yellow-100 to-orange-100">
+                <div className="absolute inset-0 opacity-20" style={{backgroundImage: 'repeating-linear-gradient(45deg, #000 0px, #000 2px, transparent 2px, transparent 12px)'}}></div>
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="text-center space-y-6 p-12">
+                    <div className="text-9xl">🌾</div>
+                    <div className="flex gap-4 justify-center">
+                      <div className="text-6xl">🍞</div>
+                      <div className="text-6xl">🥖</div>
+                      <div className="text-6xl">🥐</div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="about" className="relative py-24 bg-secondary">
+      <section id="about" className="relative py-24 bg-secondary overflow-hidden">
+        <div className="absolute inset-0 opacity-5" style={{backgroundImage: 'linear-gradient(30deg, #FFD60A 12%, transparent 12.5%, transparent 87%, #FFD60A 87.5%, #FFD60A), linear-gradient(150deg, #FFD60A 12%, transparent 12.5%, transparent 87%, #FFD60A 87.5%, #FFD60A), linear-gradient(30deg, #FFD60A 12%, transparent 12.5%, transparent 87%, #FFD60A 87.5%, #FFD60A), linear-gradient(150deg, #FFD60A 12%, transparent 12.5%, transparent 87%, #FFD60A 87.5%, #FFD60A)', backgroundSize: '80px 140px', backgroundPosition: '0 0, 0 0, 40px 70px, 40px 70px'}}></div>
+        <div className="absolute top-10 left-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-10 right-10 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
         <div className="container mx-auto px-6">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-16">
@@ -162,7 +174,11 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="products" className="relative py-24">
+      <section id="products" className="relative py-24 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-yellow-50/30 to-white"></div>
+        <div className="absolute inset-0 opacity-[0.02]" style={{backgroundImage: 'repeating-linear-gradient(0deg, #000, #000 2px, transparent 2px, transparent 40px), repeating-linear-gradient(90deg, #000, #000 2px, transparent 2px, transparent 40px)'}}></div>
+        <div className="absolute top-20 right-1/4 w-72 h-72 bg-amber-200/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-40 left-1/4 w-96 h-96 bg-yellow-200/20 rounded-full blur-3xl animate-pulse" style={{animationDelay: '1s'}}></div>
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-5xl font-bold mb-4 text-secondary">Продукция</h2>
@@ -172,7 +188,7 @@ const Index = () => {
             <div className="w-20 h-1 bg-primary mx-auto mt-6"></div>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto relative z-10">
             <Card className="group hover:shadow-2xl transition-all duration-300 border-2 hover:border-primary">
               <CardContent className="p-8 space-y-4">
                 <div className="bg-primary/10 w-16 h-16 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
@@ -302,9 +318,13 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="contacts" className="relative py-24 bg-muted">
+      <section id="contacts" className="relative py-24 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-gray-50 to-zinc-50"></div>
+        <div className="absolute inset-0" style={{backgroundImage: 'radial-gradient(circle, #FFD60A 1px, transparent 1px)', backgroundSize: '50px 50px', opacity: 0.04}}></div>
+        <div className="absolute -top-40 -left-40 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
+        <div className="absolute -bottom-40 -right-40 w-[500px] h-[500px] bg-amber-200/10 rounded-full blur-3xl"></div>
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-4xl mx-auto relative z-10">
             <div className="text-center mb-16">
               <h2 className="text-5xl font-bold mb-4 text-secondary">Контакты</h2>
               <div className="w-20 h-1 bg-primary mx-auto mt-6"></div>
